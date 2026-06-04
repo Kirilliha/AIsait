@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIVERSE — Каталог нейросетей и инструментов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ФОНОВАЯ СЕТКА -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <!-- НАВИГАЦИЯ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">AI<span>VERSE</span></a>
+      <div class="nav-links">
+        <a href="#models" class="nav-link">Модели</a>
+        <a href="#tools" class="nav-link">Инструменты</a>
+        <a href="#infra" class="nav-link">Инфраструктура</a>
+        <a href="#builders" class="nav-link">Конструкторы</a>
+      </div>
+      <button class="nav-menu-btn" id="menuBtn">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">Обновлено · 2025</div>
+    <h1 class="hero-title">Все нейросети<br>и ИИ-инструменты<br><em>в одном месте</em></h1>
+    <p class="hero-desc">Каталог актуальных ИИ-моделей, сервисов, VPS-провайдеров и конструкторов для работы с искусственным интеллектом.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">24</span><span class="stat-label">модели</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">18</span><span class="stat-label">инструмента</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">12</span><span class="stat-label">хостингов</span></div>
+    </div>
+  </section>
+
+  <!-- ФИЛЬТРЫ -->
+  <section class="filter-bar" id="models">
+    <div class="container">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="chat">Чат</button>
+        <button class="filter-btn" data-filter="image">Изображения</button>
+        <button class="filter-btn" data-filter="code">Код</button>
+        <button class="filter-btn" data-filter="audio">Аудио</button>
+        <button class="filter-btn" data-filter="video">Видео</button>
+        <button class="filter-btn" data-filter="multi">Мультимодальные</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- МОДЕЛИ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Нейросети</div>
+        <h2 class="section-title">ИИ-модели</h2>
+      </div>
+      <div class="cards-grid" id="modelsGrid">
+
+        <!-- ChatGPT -->
+        <div class="card" data-category="chat multi">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #10a37f, #0a7a5f);">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="icon-fallback">G</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">ChatGPT</div>
+              <div class="card-maker">OpenAI</div>
+            </div>
+            <div class="card-badge chat">Чат</div>
+          </div>
+          <p class="card-desc">Самый популярный чат-ассистент. GPT-4o поддерживает текст, изображения, голос и код. Широко используется для повседневных задач, анализа данных и написания текстов.</p>
+          <div class="card-tags">
+            <span class="tag">GPT-4o</span>
+            <span class="tag">o1</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://chat.openai.com" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Claude -->
+        <div class="card" data-category="chat multi code">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #cc785c, #a85a3e);">
+              <span class="icon-fallback" style="display:flex">C</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Claude</div>
+              <div class="card-maker">Anthropic</div>
+            </div>
+            <div class="card-badge multi">Мульти</div>
+          </div>
+          <p class="card-desc">Мощный ИИ-ассистент с акцентом на безопасность и точность. Claude 4 Opus — одна из умнейших моделей для сложных задач: анализ, код, длинные документы, рассуждения.</p>
+          <div class="card-tags">
+            <span class="tag">Opus 4</span>
+            <span class="tag">Sonnet</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://claude.ai" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Gemini -->
+        <div class="card" data-category="chat multi">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #4285f4, #a142f4);">
+              <span class="icon-fallback" style="display:flex">G</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Gemini</div>
+              <div class="card-maker">Google</div>
+            </div>
+            <div class="card-badge multi">Мульти</div>
+          </div>
+          <p class="card-desc">Google's флагманская мультимодальная модель. Gemini 2.5 Ultra отличается сверхдлинным контекстом, нативной работой с видео, аудио и глубокой интеграцией с Google-сервисами.</p>
+          <div class="card-tags">
+            <span class="tag">2.5 Ultra</span>
+            <span class="tag">1M токенов</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://gemini.google.com" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Grok -->
+        <div class="card" data-category="chat">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+              <span class="icon-fallback" style="display:flex">X</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Grok</div>
+              <div class="card-maker">xAI</div>
+            </div>
+            <div class="card-badge chat">Чат</div>
+          </div>
+          <p class="card-desc">ИИ от Илона Маска с реальным временем из X (Twitter). Grok 3 умеет рассуждать вслух, анализировать тренды и генерировать изображения через Aurora.</p>
+          <div class="card-tags">
+            <span class="tag">Grok 3</span>
+            <span class="tag">Real-time</span>
+            <span class="tag">X Premium</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price paid">Платно</span>
+            <a href="https://grok.com" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Llama -->
+        <div class="card" data-category="chat code multi">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #0668e1, #044a9e);">
+              <span class="icon-fallback" style="display:flex">L</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Llama</div>
+              <div class="card-maker">Meta</div>
+            </div>
+            <div class="card-badge code">Код</div>
+          </div>
+          <p class="card-desc">Открытая языковая модель от Meta. Llama 3.3 доступна бесплатно для скачивания и локального запуска. Основа для тысяч кастомных моделей. Поддерживает файн-тюнинг.</p>
+          <div class="card-tags">
+            <span class="tag">Open Source</span>
+            <span class="tag">Локально</span>
+            <span class="tag">70B</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://llama.meta.com" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Mistral -->
+        <div class="card" data-category="chat code">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #ff6b35, #cc4a1e);">
+              <span class="icon-fallback" style="display:flex">M</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Mistral</div>
+              <div class="card-maker">Mistral AI</div>
+            </div>
+            <div class="card-badge code">Код</div>
+          </div>
+          <p class="card-desc">Европейский конкурент GPT. Mistral Large 2 — мощная модель с открытыми весами для коммерческого использования. Быстрая, эффективная, отлично справляется с кодом.</p>
+          <div class="card-tags">
+            <span class="tag">Large 2</span>
+            <span class="tag">Open Weights</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://mistral.ai" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- DeepSeek -->
+        <div class="card" data-category="chat code">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #2563eb, #1d4ed8);">
+              <span class="icon-fallback" style="display:flex">D</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">DeepSeek</div>
+              <div class="card-maker">DeepSeek</div>
+            </div>
+            <div class="card-badge code">Код</div>
+          </div>
+          <p class="card-desc">Китайская open-source модель, взорвавшая рынок. DeepSeek R1 сравнима с GPT-4 при в 20 раз меньших затратах на обучение. Отличный выбор для локального развёртывания.</p>
+          <div class="card-tags">
+            <span class="tag">R1</span>
+            <span class="tag">Open Source</span>
+            <span class="tag">MoE</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://deepseek.com" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Midjourney -->
+        <div class="card" data-category="image">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #1a1a2e, #2d2d44);">
+              <span class="icon-fallback" style="display:flex">M</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Midjourney</div>
+              <div class="card-maker">Midjourney Inc.</div>
+            </div>
+            <div class="card-badge image">Арт</div>
+          </div>
+          <p class="card-desc">Лучший генератор изображений по художественному качеству. V7 создаёт фотореалистичные и концептуальные арты. Работает через Discord и веб-интерфейс.</p>
+          <div class="card-tags">
+            <span class="tag">V7</span>
+            <span class="tag">Discord</span>
+            <span class="tag">Web</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price paid">От $10/мес</span>
+            <a href="https://midjourney.com" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- DALL-E -->
+        <div class="card" data-category="image">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #10a37f, #0a7a5f);">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="DALL-E" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="icon-fallback">D</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">DALL·E 3</div>
+              <div class="card-maker">OpenAI</div>
+            </div>
+            <div class="card-badge image">Арт</div>
+          </div>
+          <p class="card-desc">Генератор изображений от OpenAI, встроенный в ChatGPT. Отлично понимает текстовые описания на русском языке. Удобен для быстрых иллюстраций.</p>
+          <div class="card-tags">
+            <span class="tag">DALL·E 3</span>
+            <span class="tag">Текст→Арт</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://openai.com/dall-e-3" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Stable Diffusion -->
+        <div class="card" data-category="image">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);">
+              <span class="icon-fallback" style="display:flex">S</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Stable Diffusion</div>
+              <div class="card-maker">Stability AI</div>
+            </div>
+            <div class="card-badge image">Арт</div>
+          </div>
+          <p class="card-desc">Open-source генератор изображений. SDXL и SD 3.5 можно запустить локально на своей видеокарте. Огромная экосистема моделей, расширений и стилей на CivitAI.</p>
+          <div class="card-tags">
+            <span class="tag">Open Source</span>
+            <span class="tag">Локально</span>
+            <span class="tag">SDXL</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://stability.ai" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Sora -->
+        <div class="card" data-category="video">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+              <span class="icon-fallback" style="display:flex">S</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Sora</div>
+              <div class="card-maker">OpenAI</div>
+            </div>
+            <div class="card-badge video">Видео</div>
+          </div>
+          <p class="card-desc">Революционный генератор видео от OpenAI. Создаёт реалистичные видеоролики по текстовому описанию длиной до 60 секунд с пониманием физики мира.</p>
+          <div class="card-tags">
+            <span class="tag">Текст→Видео</span>
+            <span class="tag">60 сек</span>
+            <span class="tag">ChatGPT Plus</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price paid">$20/мес</span>
+            <a href="https://openai.com/sora" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- ElevenLabs -->
+        <div class="card" data-category="audio">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
+              <span class="icon-fallback" style="display:flex">E</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">ElevenLabs</div>
+              <div class="card-maker">ElevenLabs</div>
+            </div>
+            <div class="card-badge audio">Аудио</div>
+          </div>
+          <p class="card-desc">Лучший сервис клонирования и синтеза голоса. Умеет создавать реалистичные голоса из текста, клонировать голос по образцу и озвучивать видео на 29 языках.</p>
+          <div class="card-tags">
+            <span class="tag">TTS</span>
+            <span class="tag">Клонирование</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://elevenlabs.io" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Whisper -->
+        <div class="card" data-category="audio">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #10a37f, #065f46);">
+              <span class="icon-fallback" style="display:flex">W</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Whisper</div>
+              <div class="card-maker">OpenAI</div>
+            </div>
+            <div class="card-badge audio">Аудио</div>
+          </div>
+          <p class="card-desc">Open-source модель распознавания речи. Поддерживает 99 языков, включая русский. Отличная точность даже при фоновом шуме. Доступна локально и через API.</p>
+          <div class="card-tags">
+            <span class="tag">STT</span>
+            <span class="tag">Open Source</span>
+            <span class="tag">99 языков</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://openai.com/research/whisper" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- GitHub Copilot -->
+        <div class="card" data-category="code">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #24292e, #1a1e22);">
+              <span class="icon-fallback" style="display:flex">C</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">GitHub Copilot</div>
+              <div class="card-maker">GitHub / Microsoft</div>
+            </div>
+            <div class="card-badge code">Код</div>
+          </div>
+          <p class="card-desc">ИИ-ассистент для разработчиков прямо в редакторе. Дополняет код, объясняет функции, пишет тесты и рефакторит. Встроен в VS Code, JetBrains и другие IDE.</p>
+          <div class="card-tags">
+            <span class="tag">VS Code</span>
+            <span class="tag">JetBrains</span>
+            <span class="tag">Chat</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price paid">$10/мес</span>
+            <a href="https://github.com/features/copilot" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+        <!-- Perplexity -->
+        <div class="card" data-category="chat">
+          <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #20b2aa, #008b8b);">
+              <span class="icon-fallback" style="display:flex">P</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-name">Perplexity</div>
+              <div class="card-maker">Perplexity AI</div>
+            </div>
+            <div class="card-badge chat">Поиск</div>
+          </div>
+          <p class="card-desc">ИИ-поисковик нового поколения. Ищет информацию в реальном времени, цитирует источники и строит развёрнутые ответы. Идеален для исследований и актуальных данных.</p>
+          <div class="card-tags">
+            <span class="tag">Real-time</span>
+            <span class="tag">Источники</span>
+            <span class="tag">Поиск</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-price free">Бесплатно</span>
+            <a href="https://perplexity.ai" target="_blank" class="card-link">Открыть →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ИНСТРУМЕНТЫ -->
+  <section class="section" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Инструменты</div>
+        <h2 class="section-title">Для работы с ИИ</h2>
+        <p class="section-desc">Сервисы для запуска, тестирования и встраивания нейросетей в продукты</p>
+      </div>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-icon tool-blue">🔗</div>
+          <div class="tool-info">
+            <div class="tool-name">LangChain</div>
+            <div class="tool-category">Фреймворк</div>
+          </div>
+          <p class="tool-desc">Популярный Python/JS-фреймворк для создания цепочек ИИ-агентов. Подключает LLM к базам данных, API, векторным хранилищам и внешним инструментам.</p>
+          <a href="https://langchain.com" target="_blank" class="tool-link">langchain.com →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon tool-green">🤗</div>
+          <div class="tool-info">
+            <div class="tool-name">Hugging Face</div>
+            <div class="tool-category">Платформа моделей</div>
+          </div>
+          <p class="tool-desc">GitHub для ИИ-моделей. Тысячи open-source моделей, датасетов и Spaces для демо. Можно запускать модели в браузере или через Inference API.</p>
+          <a href="https://huggingface.co" target="_blank" class="tool-link">huggingface.co →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon tool-orange">⚡</div>
+          <div class="tool-info">
+            <div class="tool-name">Ollama</div>
+            <div class="tool-category">Локальный запуск</div>
+          </div>
+          <p class="tool-desc">Запускай Llama, Mistral, DeepSeek локально одной командой. Поддерживает GPU и CPU, REST API, интеграцию с Open WebUI. Всё работает офлайн на твоём компьютере.</p>
+          <a href="https://ollama.com" target="_blank" class="tool-link">ollama.com →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon tool-purple">🧪</div>
+          <div class="tool-info">
+            <div class="tool-name">OpenRouter</div>
+            <div class="tool-category">API-агрегатор</div>
+          </div>
+          <p class="tool-desc">Единый API для 200+ ИИ-моделей. Один ключ вместо десяти. Автоматический фолбек, мониторинг, сравнение стоимости. OpenAI-совместимый формат запросов.</p>
+          <a href="https://openrouter.ai" target="_blank" class="tool-link">openrouter.ai →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon tool-cyan">🔍</div>
+          <div class="tool-info">
+            <div class="tool-name">Qdrant</div>
+            <div class="tool-category">Векторная БД</div>
+          </div>
+          <p class="tool-desc">Высокопроизводительная векторная база данных для RAG-систем. Хранит эмбеддинги и ищет похожие элементы за миллисекунды. Open-source, можно поднять локально.</p>
+          <a href="https://qdrant.tech" target="_blank" class="tool-link">qdrant.tech →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon tool-blue">📊</div>
+          <div class="tool-info">
+            <div class="tool-name">Weights & Biases</div>
+            <div class="tool-category">MLOps</div>
+          </div>
+          <p class="tool-desc">Платформа для отслеживания экспериментов по обучению моделей. Логирует метрики, гиперпараметры, артефакты. Незаменима при файн-тюнинге LLM.</p>
+          <a href="https://wandb.ai" target="_blank" class="tool-link">wandb.ai →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon tool-green">💬</div>
+          <div class="tool-info">
+            <div class="tool-name">Open WebUI</div>
+            <div class="tool-category">Интерфейс</div>
+          </div>
+          <p class="tool-desc">Красивый веб-интерфейс для Ollama и OpenAI API. Похож на ChatGPT, но self-hosted. Поддерживает RAG, историю чатов, плагины и мультипользовательский режим.</p>
+          <a href="https://github.com/open-webui/open-webui" target="_blank" class="tool-link">GitHub →</a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon tool-orange">🚀</div>
+          <div class="tool-info">
+            <div class="tool-name">n8n</div>
+            <div class="tool-category">Автоматизация</div>
+          </div>
+          <p class="tool-desc">No-code автоматизация с ИИ-нодами. Подключает ChatGPT, Claude, Mistral к Telegram, Google Sheets, Notion, CRM. Open-source, можно развернуть самостоятельно.</p>
+          <a href="https://n8n.io" target="_blank" class="tool-link">n8n.io →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ИНФРАСТРУКТУРА / VPS -->
+  <section class="section section-dark" id="infra">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Инфраструктура</div>
+        <h2 class="section-title">GPU & VPS для ИИ</h2>
+        <p class="section-desc">Серверы и облака для обучения и запуска моделей</p>
+      </div>
+      <div class="infra-grid">
+
+        <div class="infra-card">
+          <div class="infra-header">
+            <span class="infra-name">RunPod</span>
+            <span class="infra-badge gpu">GPU Cloud</span>
+          </div>
+          <p class="infra-desc">Доступные GPU-серверы в облаке. RTX 4090 от $0.44/час, A100 от $1.64/час. Поддерживает Docker, Jupyter, SSH. Популярен у датасаентистов и ИИ-разработчиков.</p>
+          <div class="infra-specs">
+            <span class="spec">RTX 4090 · $0.44/ч</span>
+            <span class="spec">A100 · $1.64/ч</span>
+            <span class="spec">H100 · $2.99/ч</span>
+          </div>
+          <a href="https://runpod.io" target="_blank" class="infra-link">runpod.io →</a>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-header">
+            <span class="infra-name">Vast.ai</span>
+            <span class="infra-badge gpu">GPU Marketplace</span>
+          </div>
+          <p class="infra-desc">Маркетплейс GPU от частных владельцев и датацентров. Самые низкие цены на рынке. RTX 3090 от $0.15/час. Идеально для экспериментов и обучения небольших моделей.</p>
+          <div class="infra-specs">
+            <span class="spec">RTX 3090 · $0.15/ч</span>
+            <span class="spec">A6000 · $0.55/ч</span>
+            <span class="spec">Маркетплейс</span>
+          </div>
+          <a href="https://vast.ai" target="_blank" class="infra-link">vast.ai →</a>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-header">
+            <span class="infra-name">Lambda Labs</span>
+            <span class="infra-badge gpu">GPU Cloud</span>
+          </div>
+          <p class="infra-desc">GPU-облако специально для ML. H100 кластеры до 8 GPU, долгосрочная аренда серверов. Популярен в академических кругах. Хорошая сетевая пропускная способность.</p>
+          <div class="infra-specs">
+            <span class="spec">H100 SXM · $2.49/ч</span>
+            <span class="spec">A100 · $1.29/ч</span>
+            <span class="spec">Кластеры</span>
+          </div>
+          <a href="https://lambdalabs.com" target="_blank" class="infra-link">lambdalabs.com →</a>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-header">
+            <span class="infra-name">Google Colab</span>
+            <span class="infra-badge free">Бесплатно</span>
+          </div>
+          <p class="infra-desc">Jupyter-ноутбуки с бесплатным GPU в браузере. T4 бесплатно, A100 за Pro+. Идеален для обучения, экспериментов и запуска готовых ML-скриптов без настройки окружения.</p>
+          <div class="infra-specs">
+            <span class="spec">T4 бесплатно</span>
+            <span class="spec">A100 Pro+</span>
+            <span class="spec">Jupyter</span>
+          </div>
+          <a href="https://colab.research.google.com" target="_blank" class="infra-link">colab.research.google.com →</a>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-header">
+            <span class="infra-name">Hetzner</span>
+            <span class="infra-badge vps">VPS</span>
+          </div>
+          <p class="infra-desc">Немецкий хостинг с лучшим соотношением цена/качество в Европе. VPS от €4.5/мес. Для деплоя ИИ-приложений, Open WebUI, n8n, Qdrant. Отличная сеть и надёжность.</p>
+          <div class="infra-specs">
+            <span class="spec">VPS от €4.5/мес</span>
+            <span class="spec">Германия / Финляндия</span>
+            <span class="spec">ARM64</span>
+          </div>
+          <a href="https://hetzner.com" target="_blank" class="infra-link">hetzner.com →</a>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-header">
+            <span class="infra-name">DigitalOcean</span>
+            <span class="infra-badge vps">VPS</span>
+          </div>
+          <p class="infra-desc">Удобный облачный хостинг с хорошей документацией. Droplets от $6/мес. Есть GPU-дроплеты с H100. Хорошо подходит для деплоя ИИ-приложений и API-серверов.</p>
+          <div class="infra-specs">
+            <span class="spec">Droplet от $6/мес</span>
+            <span class="spec">GPU H100</span>
+            <span class="spec">Managed DB</span>
+          </div>
+          <a href="https://digitalocean.com" target="_blank" class="infra-link">digitalocean.com →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНСТРУКТОРЫ -->
+  <section class="section" id="builders">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">No-code & Low-code</div>
+        <h2 class="section-title">Конструкторы ИИ-продуктов</h2>
+        <p class="section-desc">Создавай ИИ-приложения без глубоких знаний программирования</p>
+      </div>
+      <div class="builders-grid">
+
+        <div class="builder-card">
+          <div class="builder-top">
+            <div class="builder-name">Flowise</div>
+            <div class="builder-tag">Open Source</div>
+          </div>
+          <p class="builder-desc">Визуальный конструктор LLM-приложений. Drag-and-drop интерфейс для создания RAG-систем, агентов и чат-ботов. Self-hosted, бесплатно. Поддерживает 100+ нод.</p>
+          <div class="builder-features">
+            <span>✓ RAG</span>
+            <span>✓ Агенты</span>
+            <span>✓ Self-hosted</span>
+            <span>✓ API</span>
+          </div>
+          <a href="https://flowiseai.com" target="_blank" class="builder-link">flowiseai.com →</a>
+        </div>
+
+        <div class="builder-card">
+          <div class="builder-top">
+            <div class="builder-name">Dify</div>
+            <div class="builder-tag">Open Source</div>
+          </div>
+          <p class="builder-desc">Платформа для разработки LLM-приложений с готовым веб-интерфейсом. Поддерживает RAG, воркфлоу, агентов. Можно деплоить на своём сервере или использовать облако.</p>
+          <div class="builder-features">
+            <span>✓ Workflow</span>
+            <span>✓ RAG</span>
+            <span>✓ Облако</span>
+            <span>✓ Команды</span>
+          </div>
+          <a href="https://dify.ai" target="_blank" class="builder-link">dify.ai →</a>
+        </div>
+
+        <div class="builder-card">
+          <div class="builder-top">
+            <div class="builder-name">Botpress</div>
+            <div class="builder-tag">Чат-боты</div>
+          </div>
+          <p class="builder-desc">Платформа для создания умных чат-ботов с ИИ. Визуальный конструктор диалогов, интеграция с OpenAI, подключение к CRM и мессенджерам. Есть бесплатный план.</p>
+          <div class="builder-features">
+            <span>✓ Визуальный</span>
+            <span>✓ Telegram</span>
+            <span>✓ WhatsApp</span>
+            <span>✓ CRM</span>
+          </div>
+          <a href="https://botpress.com" target="_blank" class="builder-link">botpress.com →</a>
+        </div>
+
+        <div class="builder-card">
+          <div class="builder-top">
+            <div class="builder-name">Voiceflow</div>
+            <div class="builder-tag">Голос + Чат</div>
+          </div>
+          <p class="builder-desc">Профессиональная платформа для голосовых и текстовых агентов. Используется крупными компаниями. Поддерживает сложные воркфлоу, переменные, интеграции с API.</p>
+          <div class="builder-features">
+            <span>✓ Голос</span>
+            <span>✓ Чат</span>
+            <span>✓ Воркфлоу</span>
+            <span>✓ Команды</span>
+          </div>
+          <a href="https://voiceflow.com" target="_blank" class="builder-link">voiceflow.com →</a>
+        </div>
+
+        <div class="builder-card">
+          <div class="builder-top">
+            <div class="builder-name">Make (Integromat)</div>
+            <div class="builder-tag">Автоматизация</div>
+          </div>
+          <p class="builder-desc">Мощный инструмент автоматизации с поддержкой ИИ. Подключает 1500+ сервисов к ChatGPT, Claude и другим моделям. Визуальный редактор сценариев, сложная логика.</p>
+          <div class="builder-features">
+            <span>✓ 1500+ сервисов</span>
+            <span>✓ Триггеры</span>
+            <span>✓ ChatGPT</span>
+            <span>✓ Запросы</span>
+          </div>
+          <a href="https://make.com" target="_blank" class="builder-link">make.com →</a>
+        </div>
+
+        <div class="builder-card">
+          <div class="builder-top">
+            <div class="builder-name">Vertex AI</div>
+            <div class="builder-tag">Enterprise</div>
+          </div>
+          <p class="builder-desc">Google Cloud платформа для ML и ИИ. Обучение, деплой и мониторинг моделей в масштабе. Gemini API, AutoML, встроенные MLOps инструменты для корпоративных проектов.</p>
+          <div class="builder-features">
+            <span>✓ AutoML</span>
+            <span>✓ Gemini</span>
+            <span>✓ MLOps</span>
+            <span>✓ Scale</span>
+          </div>
+          <a href="https://cloud.google.com/vertex-ai" target="_blank" class="builder-link">cloud.google.com →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">AI<span>VERSE</span></div>
+        <p class="footer-text">Некоммерческий каталог ИИ-инструментов. Обновляется вручную.</p>
+        <div class="footer-links">
+          <a href="#models">Модели</a>
+          <a href="#tools">Инструменты</a>
+          <a href="#infra">Инфраструктура</a>
+          <a href="#builders">Конструкторы</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
